@@ -1,0 +1,188 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+int main()
+{
+    //This is i/o part of the code
+    cout<<"INPUT/OUTPUT"<<endl;
+	int x;
+    cout<<"Please enter integer number:";
+    cin>>x;
+    cout<<"Output:\t"<<x<<endl;
+    long test;
+    cout<<"Please enter long integer:";
+    cin>>test;
+    cout<<"Output:\t"<<test<<endl;
+    short _test;
+    cout<<"Please enter short integer:";
+    cin>>_test;
+    cout<<"Output:\t"<<_test<<endl;
+    float y;
+    cout<<"Please enter floating point number:";
+    cin>>y;
+    cout<<"Output:\t"<<y<<endl;
+    double z;
+    cout<<"Please enter double number:";
+    cin>>z;
+    cout<<"Output:\t"<<z<<endl;
+    float a,b,c;
+    cout<<"Enter three numbers at a time \n";
+    cin>>a>>b>>c;
+    cout<<"Output:\t"<<a<<','<<b<<','<<c<<endl;
+    char any;
+    cout<<"Enter any character:";
+    cin>>any;
+    cout<<"Character:   "<<any<<endl;
+    string name;
+    cout<<"Enter your name without spaces:";
+    cin>>name;
+    cout<<"Name:\t"<<name<<endl<<endl; 
+    
+	//This is grafitti part of the code
+	cout<<"  ****GRAFITTI****"<<endl;
+	cout<<"1-Rhombus \n2-Triangle \n3-sqaure"<<endl;
+    int shape;
+    cout<<"Enter number of shape:";
+    cin>>shape;
+    if (shape==1)
+    {
+        cout<<"Rhombus"<<endl<<endl<<"     *   \n    ***  \n   ***** \n  *******\n   ***** \n    ***  \n     *   ";
+        cout<<endl<<endl;
+    }
+    if (shape==2)
+    {
+        cout<<"Triangle"<<endl<<endl<<"      *    \n     ***   \n    *****  \n   ******* \n  *********";
+        cout<<endl<<endl;
+    }
+    if (shape==3)
+    {
+    	cout<<"Square"<<endl<<endl<<"  *********\n  *       *\n  *       *\n  *       *\n  *********";
+    	cout<<endl<<endl;
+    }
+    
+    //Table code
+    cout<<"  ****TABLE****"<<endl;
+	float tab;
+    cout<<"Enter the integer:";
+    cin>>tab;
+    cout<<"Table:"<<endl;
+    for(int q=1;q<=10;q++)
+    {
+        cout<<tab<<" x "<<q<<'='<<tab*q<<endl;
+    }
+    
+	//constant
+	cout<<"  ****CONSTANT****"<<endl;
+	const float g=9.8;
+	cout<<"g has a constant value = "<<g<<endl<<endl ;
+	
+	
+	//Calculator
+	cout<<"  ****CALCULATOR****"<<endl;
+	int opr;
+    cout<<"Enter number of the operation:"<<endl;
+    cout<<"1-Addition"<<endl<<"2-Subraction"<<endl<<"3-Multiplication"<<endl<<"4-Division"<<endl;
+    cout<<"5-Remainder"<<endl<<"6-Power"<<endl<<"7-Sqaure Root"<<endl;
+    cout<<"Enter:";
+    cin>>opr;
+
+    if(opr<=4)
+    {
+        float a1,b1;
+    cout<<"Enter first number:";
+    cin>>a1;
+    cout<<"Enter second number:";
+    cin>>b1;
+    
+    
+    if (opr==1)
+    {
+        cout<<"Addition="<<a1+b1<<endl<<endl;
+    }
+    else if (opr==2)
+    {
+        cout<<"Subtraction="<<a1-b1<<endl<<endl;
+    }
+    else if (opr==3)
+    {
+        cout<<"Multiplication="<<a1*b1<<endl<<endl;
+    }
+    else if (opr==4)
+    {
+        cout<<"Division="<<a1/b1<<endl<<endl;
+    }
+    }
+    else if (opr==5)
+    {
+        int c1,d1;
+    cout<<"Enter first number:";
+    cin>>c1;
+    cout<<"Enter second number:";
+    cin>>d1;
+    cout<<"Remainder="<<c1%d1<<endl<<endl;
+    }
+    else if(opr==6)
+    {
+cout<<"Power="<<pow(x1,y1)<<endl<<endl;
+    }
+    else if(opr==7)
+    {
+        int e;
+        cout<<"Enter the number:";
+        cin>>e;
+        
+    }
+    
+	//Quadrants
+    cout<<"  ****QUADRANTS****"<<endl;
+    float x2,y2;
+    cout<<"Enter the coordinates of point"<<endl;
+    cout<<"x:";
+    cin>>x2;
+    cout<<"y:";
+    cin>>y2;
+    if (x2!=0){
+        if (y2!=0){
+            if (x2>0){
+                if (y2>0){
+                    cout<<"1st Quadrant"<<endl<<endl;
+                }
+                else if (y2<0){
+                    cout<<"4th Quadrant"<<endl<<endl;
+                }
+                }
+                else if (x2<0){
+                    if (y2>0){
+                        cout<<"2nd Quadrant"<<endl<<endl;
+                    }
+                    else {
+                        cout<<"3rd Quadrant"<<endl<<endl;
+                    }
+                }
+            } 
+        else if (y2==0){
+            if (x2>0){
+                cout<<"Right half plane"<<endl<<endl;
+            }
+            else{
+                cout<<"Left half plane"<<endl<<endl;
+            }
+        }
+    }
+    else if (x2==0){
+        if (y2==0){
+            cout<<"Its on the origin."<<endl<<endl;
+        }
+        else if (y2!=0){
+            if (y2>0){
+                cout<<"Upper half plane"<<endl<<endl;
+                    }
+                else{
+                    cout<<"Lower half plane"<<endl<<endl;
+                }
+            }
+        }
+    
+    return 0;
+}
